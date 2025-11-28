@@ -1,0 +1,43 @@
+@media (max-width: 1165px) {
+    main {
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            &_card {
+                max-width: 100%;
+
+                &--content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #F5F4FA;
+                }
+            }
+        }
+
+        .whatWeDo {
+            display: none;
+        }
+
+        .header {
+
+            &_page {
+
+                &--content {
+                    display: grid;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        .info {
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
