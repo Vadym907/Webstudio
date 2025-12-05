@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -71,6 +72,50 @@
 }
 .header_page--content--wrap--info:hover {
   color: #2196F3;
+}
+.header_page--burger {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+.header_page--burger span {
+  display: block;
+  height: 3px;
+  margin: 6px 0;
+  background: #000;
+  transition: 0.4s;
+}
+.header_page--burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.header_page--burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.header_page--burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.header_page--menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background: #222;
+  transition: 0.4s;
+  padding-top: 80px;
+}
+.header_page--menu.active {
+  right: 0;
+}
+.header_page--menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.header_page--menu a:hover {
+  text-decoration: underline;
 }
 
 .solution {
@@ -669,6 +714,17 @@
 }
 
 @media (max-width: 1165px) {
+  body .header_page--content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start;
+  }
+  main .solution_page {
+    background-image: url(./img_index/solution-bg2);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   main .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -683,16 +739,30 @@
     justify-content: center;
     background: #F5F4FA;
   }
+  main .info_card--content--text {
+    max-width: 354px;
+  }
   main .whatWeDo {
     display: none;
   }
-  main .header_page--content {
-    display: grid;
-  }
 }
-@media (max-width: 600px) {
+@media (max-width: 680px) {
+  main .solution {
+    background-image: url(./img_index/solution-bg3);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   main .info {
     grid-template-columns: 1fr;
+  }
+  body .header_page--container {
+    display: none;
+  }
+  body .header_page--content {
+    display: none;
+  }
+  body .header_page--burger {
+    display: block;
   }
 }
 * {
