@@ -375,6 +375,7 @@
 
 .team {
   background: #F5F4FA;
+  padding: 0 15;
 }
 .team_content {
   max-width: 1170px;
@@ -394,6 +395,7 @@
 }
 .team_content--container {
   display: flex;
+  width: 100%;
   justify-content: space-between;
 }
 .team_content--container--card {
@@ -720,10 +722,44 @@
     row-gap: 10px;
     align-items: flex-start;
   }
+  body .footer_page {
+    display: flex;
+    flex-direction: column;
+    max-width: 603px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  body .footer_page--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .footer_page--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .footer_page--div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 60px;
+  }
   main .solution_page {
     background-image: url(./img_index/solution-bg2);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  main .client {
+    max-width: 738px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .client_page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
   }
   main .info {
     display: grid;
@@ -745,15 +781,58 @@
   main .whatWeDo {
     display: none;
   }
+  main .team_content--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .team_content--container--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 354px;
+  }
+  main .team_content--container--card--img {
+    width: 354px;
+    height: 354px;
+  }
 }
-@media (max-width: 680px) {
-  main .solution {
+@media (max-width: 750px) {
+  main .client {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .client_page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  main .solution_page {
     background-image: url(./img_index/solution-bg3);
     background-repeat: no-repeat;
     background-size: cover;
   }
   main .info {
     grid-template-columns: 1fr;
+  }
+  main .team_content {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .team_content--container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main .team_content--container--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+  }
+  main .team_content--container--card--img {
+    width: 450px;
+    height: 450px;
   }
   body .header_page--container {
     display: none;

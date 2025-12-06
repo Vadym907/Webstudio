@@ -298,6 +298,7 @@
 
 .team {
     background: #F5F4FA;
+    padding: 0 15;
 
     &_content {
         max-width: 1170px;
@@ -318,6 +319,7 @@
 
         &--container {
             display: flex;
+            width: 100%;
             justify-content: space-between;
 
             &--card {
