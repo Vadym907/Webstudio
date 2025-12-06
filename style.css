@@ -507,6 +507,12 @@
   width: 100%;
   justify-content: space-between;
 }
+.footer_page--div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 507px;
+  width: 100%;
+}
 .footer_page--content--form--label {
   font-family: Roboto;
   font-weight: 700;
@@ -609,6 +615,9 @@
 .ourproject {
   max-width: 1170px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 }
 .ourproject_container {
@@ -688,7 +697,9 @@
 .ourproject_content {
   max-width: 575px;
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-top: 94px;
   margin-bottom: 50px;
 }
@@ -740,16 +751,44 @@
     flex-direction: column;
     align-items: center;
   }
+  body .footer_page--content--form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .footer_page--content--form--wrap {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    row-gap: 20px;
+  }
   body .footer_page--div {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding-bottom: 60px;
   }
-  main .solution_page {
+  main .solution--modal--content--form--textarea {
+    width: 370px;
+  }
+  main .solution--modal--content--form--wrap {
+    width: 370px;
+  }
+  main .solution_container {
     background-image: url(./img_index/solution-bg2);
-    background-repeat: no-repeat;
-    background-size: cover;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .solution_container--title {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 26px;
+    color: #fff;
+    line-height: 42px;
+    letter-spacing: 6%;
+    text-align: center;
+    text-transform: uppercase;
   }
   main .client {
     max-width: 738px;
@@ -765,6 +804,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    max-width: 738px;
+    width: 100%;
+    margin: 0 auto;
   }
   main .info_card {
     max-width: 100%;
@@ -781,6 +823,11 @@
   main .whatWeDo {
     display: none;
   }
+  main .team_content {
+    max-width: 738px;
+    width: 100%;
+    margin: 0 auto;
+  }
   main .team_content--container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -795,8 +842,34 @@
     width: 354px;
     height: 354px;
   }
+  main .ourproject {
+    max-width: 738px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .ourproject_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 750px) {
+  main .ourproject {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .ourproject_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    row-gap: 15px;
+    width: 100%;
+    max-width: 326px;
+  }
+  main .ourproject_container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   main .client {
     max-width: 450px;
     width: 100%;
@@ -807,13 +880,26 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
-  main .solution_page {
+  main .solution_container {
     background-image: url(./img_index/solution-bg3);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+  }
+  main .solution_container--title {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 26px;
+    color: #fff;
+    line-height: 42px;
+    letter-spacing: 6%;
+    text-align: center;
+    text-transform: uppercase;
   }
   main .info {
     grid-template-columns: 1fr;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
   }
   main .team_content {
     max-width: 450px;
@@ -842,6 +928,40 @@
   }
   body .header_page--burger {
     display: block;
+  }
+  body .footer_page {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  body .footer_page--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .footer_page--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .footer_page--content--form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .footer_page--content--form--wrap {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    row-gap: 20px;
+  }
+  body .footer_page--div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }
 * {

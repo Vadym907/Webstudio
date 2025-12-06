@@ -11,6 +11,13 @@
         width: 100%;
         justify-content: space-between;
 
+        &--div {
+            display: flex;
+            justify-content: space-between;
+            max-width: 507px;
+            width: 100%;
+        }
+
         &--content {
 
 
