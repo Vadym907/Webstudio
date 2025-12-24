@@ -3,6 +3,18 @@
         .header {
 
             &_page {
+                display: flex;
+                align-items: center;
+
+                &--container {
+                    display: flex;
+                    align-items: center;
+
+                    &--nav {
+                        padding-left: 20px;
+                    }
+                }
+
 
                 &--content {
                     display: flex;
@@ -109,6 +121,10 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 30px;
+
+                svg {
+                    max-width: 100%;
+                }
             }
         }
 
@@ -116,22 +132,18 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            max-width: 738px;
-            width: 100%;
-            margin: 0 auto;
+            padding-top: 60px;
+            row-gap: 30px;
 
             &_card {
                 max-width: 100%;
+                margin: 0;
 
                 &--content {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     background: #F5F4FA;
-
-                    &--text {
-                        max-width: 354px;
-                    }
                 }
             }
         }
@@ -156,6 +168,10 @@
                         flex-direction: column;
                         align-items: center;
                         max-width: 354px;
+
+                        &--div {
+                            padding-left: 0;
+                        }
 
                         &--img {
                             width: 354px;
@@ -184,6 +200,7 @@
 
 @media (max-width: 750px) {
     main {
+
         .ourproject {
             max-width: 450px;
             width: 100%;
@@ -237,10 +254,22 @@
         }
 
         .info {
+            display: grid;
             grid-template-columns: 1fr;
-            max-width: 450px;
-            width: 100%;
-            margin: 0 auto;
+            padding-top: 60px;
+            row-gap: 30px;
+
+            &_card {
+                max-width: 100%;
+                margin: 0;
+
+                &--content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #F5F4FA;
+                }
+            }
         }
 
         .team {
@@ -276,6 +305,9 @@
         .header {
 
             &_page {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
                 &--container {
                     display: none;
@@ -285,8 +317,9 @@
                     display: none;
                 }
 
-                &--burger {
+                &--menu {
                     display: block;
+                    padding-bottom: 28px;
                 }
             }
         }

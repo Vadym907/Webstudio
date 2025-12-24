@@ -1,17 +1,28 @@
-(() => {
-    const modal = document.getElementById("modal");
-    const openBtn = document.getElementById("openModal");
-    const closeBtn = document.querySelector(".solution--modal--content--close");
 
-    openBtn.onclick = () => modal.style.display = "flex";
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+const burgerBtn = document.querySelector('.top--page--menu');
+    const mobileMenu = document.querySelector('#mobileMenu');
+    const closeEls = mobileMenu?.querySelectorAll('[data-close]');
 
-})();
-    const burger = document.querySelector('.burger');
-    const menu = document.querySelector('.menu');
+    function openMenu() {
+    if (!mobileMenu || !burgerBtn) return;
+    mobileMenu.classList.add('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    burgerBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    }
 
-burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-    menu.classList.toggle('active');
-});
+    function closeMenu() {
+    if (!mobileMenu || !burgerBtn) return;
+    mobileMenu.classList.remove('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    }
+
+    burgerBtn?.addEventListener('click', openMenu);
+
+    closeEls?.forEach((el) => el.addEventListener('click', closeMenu));
+
+    document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+    });
