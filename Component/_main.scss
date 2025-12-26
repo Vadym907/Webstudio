@@ -28,13 +28,21 @@
 
 
     &--modal {
-        display: none;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 250ms ease;
         position: fixed;
         inset: 0;
         background: rgba(0, 0, 0, 0.5);
         align-items: center;
         justify-content: center;
         z-index: 1;
+
+        &.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
         &_container {
 

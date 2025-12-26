@@ -5,6 +5,7 @@
             &_page {
                 display: flex;
                 align-items: center;
+                justify-content: start;
 
                 &--container {
                     display: flex;
@@ -291,8 +292,9 @@
                         max-width: 450px;
 
                         &--img {
-                            width: 450px;
-                            height: 450px;
+                            width: 100%;
+                            max-width: 450px;
+                            height: auto;
                         }
                     }
                 }
